@@ -1,28 +1,20 @@
 package media.disc;
-import media.*;
+public class DigitalVideoDisc extends Disc implements Playable{
 
-public class DigitalVideoDisc extends Media {
+    public DigitalVideoDisc(int id, String title, String category, String director,Float length, Float cost) {
+        super(id, title, category, director, length, cost);
+    }
 
-    private String trackList;
-    private String director;
-    private Float length;
-
-    public DigitalVideoDisc(int id, String title, String category, Float cost, String director, String trackList, Float length) {
-        super(id, title, category, cost);
-        this.trackList = trackList;
-        this.director = director;
-        this.length = length;
+    @Override
+    public void play() throws PlayerException {
+        if (this.getLength() > 0) {
+            System.out.println("Playing DVD: " + this.getTitle());
+            System.out.println("DVD length: " + this.getLength());
+        } 
+        else {
+            throw new PlayerException("ERROR: DVD " + this.getTitle() + " length error!!!");
+        }
     }
     
-    public String getTrackList() {
-        return trackList;
-    }
-
-    public String getDirector() {
-        return director;
-    }
-
-    public Float getLength() {
-        return length;
-    }
+    
 }

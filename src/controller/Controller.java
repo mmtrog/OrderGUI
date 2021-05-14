@@ -12,7 +12,7 @@ import javafx.event.ActionEvent;
 
 public class Controller{
     
-    
+    // Exit
     @FXML private Button exitButton;
     @FXML
     public void exitButtonAction() {
@@ -20,8 +20,9 @@ public class Controller{
         stage.close();
     }
 
+
+    // Book
     @FXML private MenuButton Book;
-    
     @FXML
     public void bookContentAction() throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("BookContent.fxml"));        
@@ -29,19 +30,35 @@ public class Controller{
         window.setScene(new Scene(root));
         window.show();
     }
-
-
     @FXML 
     public void listOfBookAction() throws Exception {
-        
         Parent root = FXMLLoader.load(getClass().getResource("BookList.fxml"));        
         Stage window = (Stage) Book.getScene().getWindow();
         window.setScene(new Scene(root));
         window.show();
     }
     
+
+    // DVD
+    @FXML private MenuButton dvd;
+    @FXML
+    public void listOfDVDAction() throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("DVDList.fxml"));        
+        Stage window = (Stage) Book.getScene().getWindow();
+        window.setScene(new Scene(root));
+        window.show();
+    } 
+    @FXML
+    public void playDVDAction() throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("PlayDVD.fxml"));        
+        Stage window = (Stage) Book.getScene().getWindow();
+        window.setScene(new Scene(root));
+        window.show();
+    }
+
+
+    // Manage Orders 
     @FXML private MenuButton manageOrdersButton;
-    
     @FXML 
     public void createNewOrderAction() throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("CreateNewOrder.fxml"));        
@@ -49,7 +66,6 @@ public class Controller{
         window.setScene(new Scene(root));
         window.show();
     }   
-
     @FXML 
     public void listItemOfOrderAction() throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("ListItemOfOrder.fxml"));        
@@ -58,4 +74,12 @@ public class Controller{
         window.show();
     }
 
-} 
+    
+    // Manage Items 
+    @FXML MenuButton manageItemsButton;
+
+
+
+}
+
+    

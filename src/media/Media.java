@@ -1,6 +1,6 @@
 package media;
 
-public class Media implements Comparable<Object> {
+public class Media {
     
     protected String title;
     protected String category;
@@ -30,27 +30,5 @@ public class Media implements Comparable<Object> {
    
     public Float getCost() {
         return cost;
-    }
-    
-    //********************************* Override equals methods **********************************
-
-    @Override
-    public boolean equals(Object o) {
-        if (o instanceof Media) {
-            Media media = (Media) o;
-            return media.getId() == this.id;
-        }
-        return false;
-    }
-
-    //********************************* Override Sort method **********************************
-
-    @Override
-    public int compareTo(Object o) {
-        if (o instanceof Media) {
-            Media media = (Media) o;
-            return this.cost.compareTo(media.getCost());                 
-        }
-        return 1;
     }
 }
