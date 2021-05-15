@@ -1,10 +1,12 @@
 package media.disc;
 
-public class Track implements Playable {
+public class Track {
     private String title;
     private Float length;
+    private int id;
 
-    public Track(String title, Float length) {
+    public Track(int id, String title, Float length) {
+        this.id = id;
         this.title = title;
         this.length = length;
     }
@@ -16,16 +18,8 @@ public class Track implements Playable {
     public Float getLength() {
         return length;
     }
-   
-    @Override
-    public void play() throws PlayerException{
-        if (this.getLength() > 0) {
-            System.out.println("Playing Track: " + this.getTitle());
-            System.out.println("Track length: " + this.getLength());
-        } 
-        else {
-            throw new PlayerException("ERROR: Track " + this.getTitle() + " length error!!!");
-        }
-    }
 
+    public int getId() {
+        return id;
+    }
 }

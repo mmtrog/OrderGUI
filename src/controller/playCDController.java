@@ -7,13 +7,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import mySQL.dataBookContent;
-import mySQL.dataDVDPlay;
+import mySQL.dataCDPlay;
 
-public class playDVDController {
+public class playCDController {
 
     @FXML private Button backHome;
 
@@ -35,7 +33,7 @@ public class playDVDController {
 
     @FXML
     public void btnConfirmAction() {
-        label.setText(dataDVDPlay.getData(textInput.getText()));
+        label.setText(dataCDPlay.getData(textInput.getText()));
     }
 
     @FXML 

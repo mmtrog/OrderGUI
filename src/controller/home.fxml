@@ -78,11 +78,11 @@
                 <MenuItem mnemonicParsing="false" onAction="#playDVDAction" text="Play DVD" />
               </items>
             </MenuButton>
-            <MenuButton mnemonicParsing="false" prefHeight="26.0" prefWidth="90.0" text="CD">
+            <MenuButton fx:id="cd" mnemonicParsing="false" prefHeight="26.0" prefWidth="90.0" text="CD">
               <items>
-                <MenuItem mnemonicParsing="false" text="List of CD" />
-                <MenuItem mnemonicParsing="false" text="List track of CD" />
-                  <MenuItem mnemonicParsing="false" text="Play track" />
+                <MenuItem mnemonicParsing="false" onAction="#listOfCDAction" text="List of CD" />
+                <MenuItem mnemonicParsing="false" onAction="#listOfTrackAction" text="List track of CD" />
+                  <MenuItem mnemonicParsing="false" onAction="#playTrackAction" text="Play track" />
               </items>
             </MenuButton>
             <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />

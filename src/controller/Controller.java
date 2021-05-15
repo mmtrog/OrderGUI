@@ -56,6 +56,29 @@ public class Controller{
         window.show();
     }
 
+    // CD
+    @FXML private MenuButton cd;
+    @FXML
+    public void listOfCDAction() throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("CDList.fxml"));        
+        Stage window = (Stage) Book.getScene().getWindow();
+        window.setScene(new Scene(root));
+        window.show();
+    }
+    @FXML
+    public void listOfTrackAction() throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("TrackList.fxml"));        
+        Stage window = (Stage) Book.getScene().getWindow();
+        window.setScene(new Scene(root));
+        window.show();
+    }
+    @FXML
+    public void playTrackAction() throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("PlayCD.fxml"));        
+        Stage window = (Stage) Book.getScene().getWindow();
+        window.setScene(new Scene(root));
+        window.show();
+    }
 
     // Manage Orders 
     @FXML private MenuButton manageOrdersButton;

@@ -37,19 +37,17 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToolBar?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.playDVDController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.playCDController">
   <children>
       <ToolBar prefHeight="36.0" prefWidth="640.0">
          <items>
             <Button fx:id="backHome" mnemonicParsing="false" onAction="#backHomeAction" prefHeight="26.0" prefWidth="83.0" text="Back" />
-            <Separator orientation="VERTICAL" prefHeight="26.0" prefWidth="218.0" />
-            <TextField fx:id="textInput" prefHeight="26.0" prefWidth="188.0" promptText="Enter ID of the DVD want to play" />
+            <Separator orientation="VERTICAL" prefHeight="26.0" prefWidth="221.0" />
+            <TextField fx:id="textInput" prefHeight="26.0" prefWidth="190.0" promptText="Enter ID of CD want to play Track" />
             <Button fx:id="btnConfirm" mnemonicParsing="false" onAction="#btnConfirmAction" prefHeight="26.0" prefWidth="117.0" text="Play " textFill="#f70096">
                <font>
                   <Font name="System Bold" size="12.0" />
@@ -58,30 +56,26 @@
       </ToolBar>
       <BorderPane prefHeight="366.0" prefWidth="640.0">
          <left>
-            <Button fx:id="previousButton" alignment="CENTER" mnemonicParsing="false" onAction="#btnPreviousAction" prefHeight="320.0" prefWidth="157.0" text="Previous DVD" BorderPane.alignment="CENTER">
+            <Button fx:id="previousButton" alignment="CENTER" mnemonicParsing="false" onAction="#btnPreviousAction" prefHeight="365.0" prefWidth="157.0" text="Previous CD" BorderPane.alignment="CENTER">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font></Button>
          </left>
          <right>
-            <Button fx:id="nextButton" alignment="CENTER" mnemonicParsing="false" onAction="#btnNextAction" prefHeight="320.0" prefWidth="157.0" text="Next DVD" BorderPane.alignment="CENTER">
+            <Button fx:id="nextButton" alignment="CENTER" mnemonicParsing="false" onAction="#btnNextAction" prefHeight="365.0" prefWidth="157.0" text="Next CD" BorderPane.alignment="CENTER">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font></Button>
          </right>
-         <bottom>
-            <Label fx:id="label" alignment="CENTER" prefHeight="46.0" prefWidth="640.0" text="DVD does not exist" wrapText="true" BorderPane.alignment="CENTER">
-               <font>
-                  <Font name="System Bold Italic" size="20.0" />
-               </font>
-            </Label>
-         </bottom>
          <center>
-            <ImageView fitHeight="328.0" fitWidth="318.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-               <image>
-                  <Image url="@../image/cd.gif" />
-               </image>
-            </ImageView>
+            <VBox prefHeight="365.0" prefWidth="521.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="label" alignment="CENTER" prefHeight="367.0" prefWidth="536.0" text="CD does not exist" wrapText="true">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font></Label>
+               </children>
+            </VBox>
          </center>
       </BorderPane>
   </children>
