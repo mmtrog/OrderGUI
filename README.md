@@ -18,6 +18,7 @@ The workspace contains two folders by default, where:
     PASS = "Password";
 
 - Database fields:
+    
     TABLE media
         
         Field       Type            Null    Default
