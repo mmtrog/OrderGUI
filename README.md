@@ -19,6 +19,7 @@ The workspace contains two folders by default, where:
 
 - Database fields:
     TABLE media
+        
         Field       Type            Null    Default
     
         type        varchar(255)    yes     null
@@ -28,6 +29,7 @@ The workspace contains two folders by default, where:
         cost        float           no      null
 
     TABLE book
+        
         Field       Type            Null    Default
     
         type        varchar(255)    yes     null
@@ -39,11 +41,13 @@ The workspace contains two folders by default, where:
         content     text            yes     null
     
     TABLE authorslist
+        
         Field       Type            Null    Default
         authorslist varchar(255)    yes     null
         author      varchar(255)    yes     null
     
     TABLE digitalvideodisc
+        
         Field       Type            Null    Default
     
         type        varchar(255)    yes     null
@@ -55,6 +59,7 @@ The workspace contains two folders by default, where:
         cost        float           no      null
 
     TABLE compactdisc
+        
         Field       Type            Null    Default
 
         type        varchar(255)    yes     null
@@ -67,6 +72,7 @@ The workspace contains two folders by default, where:
         cost        float           no      null
 
     TABLE tracklist
+        
         Field       Type            Null    Default
 
         id          int             no      null
