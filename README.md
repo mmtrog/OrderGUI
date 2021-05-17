@@ -1,6 +1,6 @@
 ## Getting Started
 
-Welcome to my project. Here is a guideline to help you take it easy.
+Welcome to my project. Here is a guide to make it easier for you to use.
 
 ## Folder Structure
 
