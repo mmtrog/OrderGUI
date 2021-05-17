@@ -14,11 +14,13 @@ public class Book extends Media {
     private String content;
     
 //************************************* Constructors *************************************
-    
+
     public Book(int id, String title, String category, Float cost, String authorsList) {
-        super(id, title, category, cost);
+        super(id, title, category, cost);        
         this.authorsList = authorsList;
     }
+
+    
 
 
 //************************************* Getters and Setters methods ************************************* 

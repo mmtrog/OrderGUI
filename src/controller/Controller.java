@@ -80,28 +80,16 @@ public class Controller{
         window.show();
     }
 
-    // Manage Orders 
-    @FXML private MenuButton manageOrdersButton;
-    @FXML 
-    public void createNewOrderAction() throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("CreateNewOrder.fxml"));        
-        Stage window = (Stage) manageOrdersButton.getScene().getWindow();
-        window.setScene(new Scene(root));
-        window.show();
-    }   
-    @FXML 
-    public void listItemOfOrderAction() throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("ListItemOfOrder.fxml"));        
-        Stage window = (Stage) manageOrdersButton.getScene().getWindow();
+    // Order
+    @FXML Button order;
+    @FXML
+    public void orderAction() throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("Order.fxml"));        
+        Stage window = (Stage) Book.getScene().getWindow();
         window.setScene(new Scene(root));
         window.show();
     }
-
     
-    // Manage Items 
-    @FXML MenuButton manageItemsButton;
-
-
 
 }
 

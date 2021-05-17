@@ -6,20 +6,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch Test",
-            "request": "launch",
-            "mainClass": "Test",
-            "projectName": "PracticeGUI_5422fdb3"
-        },
-        {
-            "type": "java",
-            "name": "Launch Aims",
-            "request": "launch",
-            "mainClass": "Aims",
-            "projectName": "PracticeGUI_5422fdb3"
-        },
-        {
-            "type": "java",
             "name": "Launch App",
             "request": "launch",
             "mainClass": "App",

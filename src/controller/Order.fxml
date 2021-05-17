@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.orderController">
+  <children>
+      <ToolBar prefHeight="36.0" prefWidth="499.0">
+         <items>
+            <Button fx:id="backHome" mnemonicParsing="false" onAction="#backHomeAction" prefHeight="26.0" prefWidth="83.0" text="Back" />
+         </items>
+      </ToolBar>
+      <HBox prefHeight="385.0" prefWidth="640.0">
+         <children>
+            <StackPane prefHeight="365.0" prefWidth="642.0">
+               <children>
+                  <TableView fx:id="table" prefHeight="365.0" prefWidth="268.0">
+                     <columns>
+                        <TableColumn fx:id="id" prefWidth="43.999998450279236" text="ID" />
+                        <TableColumn fx:id="type" prefWidth="48.800048828125" text="Type" />
+                        <TableColumn fx:id="title" prefWidth="165.59998321533203" text="Title" />
+                        <TableColumn fx:id="category" prefWidth="147.20001220703125" text="Category" />
+                        <TableColumn fx:id="cost" prefWidth="92.79998779296875" text="Cost" />
+                     </columns>
+                  </TableView>
+               </children>
+            </StackPane>
+            <VBox alignment="CENTER_LEFT" prefHeight="365.0" prefWidth="286.0">
+               <children>
+                  <Label prefHeight="31.0" prefWidth="144.0" text="Choose type of Media:" />
+                  <RadioButton fx:id="bookRadioButton" mnemonicParsing="false" selected="true" text="Book">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="typeChoose" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="dvdRadioButton" mnemonicParsing="false" text="DVD" toggleGroup="$typeChoose" />
+                  <RadioButton fx:id="cdRadioButton" mnemonicParsing="false" text="CD" toggleGroup="$typeChoose" />
+                  <TextField fx:id="addMedia" promptText="Enter ID of Media" />
+                  <Button fx:id="addMediaButton" alignment="CENTER" mnemonicParsing="false" onAction="#addMedia" prefHeight="26.0" prefWidth="154.0" text="Add" />
+                  <Separator prefHeight="237.0" prefWidth="142.0" />
+                  <Label prefHeight="31.0" prefWidth="144.0" text="Choose type of Media:" />
+                  <RadioButton fx:id="bookRadioButton1" mnemonicParsing="false" selected="true" text="Book">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="typeChoose1" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="dvdRadioButton1" mnemonicParsing="false" text="DVD" toggleGroup="$typeChoose1" />
+                  <RadioButton fx:id="cdRadioButton1" mnemonicParsing="false" text="CD" toggleGroup="$typeChoose1" />
+                  <TextField fx:id="removeMedia" promptText="Enter ID of Media" />
+                  <Button fx:id="removeMediaButton" mnemonicParsing="false" onAction="#removeMedia" prefHeight="26.0" prefWidth="174.0" text="Remove" />
+                  <Separator prefHeight="237.0" prefWidth="142.0" />
+                  <HBox prefHeight="14.0" prefWidth="142.0">
+                     <children>
+                        <Label prefHeight="22.0" prefWidth="125.0" text="Total cost">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="totalCost" editable="false" prefHeight="26.0" prefWidth="152.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+  </children>
+</VBox>
